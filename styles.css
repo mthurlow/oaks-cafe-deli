@@ -1,0 +1,212 @@
+:root {
+	--crimson-color: rgb(121, 19, 43);
+	--grey-color: rgb(88, 89, 91);
+}
+
+@font-face {
+    font-family: Swashington;
+    src: url("resources/Swashington.otf") format("opentype");
+}
+
+h1, h2, h3, h4, h5, h6, #mainNav {
+    font-family: Swashington, Georgia, serif;
+    src: url("../font/Swashington.otf") format("opentype");
+}
+
+tr, th, td {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+body {
+  font-family: Georgia, serif;
+  letter-spacing: 0.0625em;
+  color: var(--crimson-color);
+}
+
+.logo {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.menuCategoryButton {
+    margin-bottom: 1rem;
+}
+
+.visible {
+    display: block;
+    visibility: visible;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+  color: var(--grey-color);
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  color: fade(var(--crimson-color), 80%);
+}
+
+.fab {
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-section, .gallery-section, footer {
+  background: var(--crimson-color);
+}
+
+footer {
+  color: white;
+}
+
+.about-section, .menu-section, .gallery-section, .contact-section, footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* #region mainNav */
+#mainNav {
+    min-height: 56px;
+    background-color: var(--crimson-color);
+}
+  
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: white;
+    border: 1px solid white;
+}
+  
+#mainNav .navbar-toggler:focus {
+    outline: none;
+}
+  
+#mainNav .navbar-brand {
+    color: white;
+    font-weight: 700;
+    padding: .9rem 0;
+}
+  
+#mainNav .navbar-nav .nav-item:hover {
+    color: fade(white, 80%);
+    outline: none;
+    background-color: transparent;
+}
+  
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+}
+  
+@media (min-width: 992px) {
+    #mainNav {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      /* background-color: transparent; */
+      background-color: var(--crimson-color);
+    }
+    #mainNav .navbar-brand {
+      padding: .5rem 0;
+      color: white;
+    }
+    #mainNav .nav-link {
+      transition: none;
+      padding: 2rem 1.5rem;
+      color: white;
+    }
+    #mainNav .nav-link:hover {
+      color: fade(white, 80%);
+    }
+    #mainNav .nav-link:active {
+      color: white;
+    }
+    #mainNav.navbar-shrink {
+      background-color: var(--crimson-color);
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      color: white;
+    }
+    #mainNav.navbar-shrink .nav-link {
+      color: white;
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-bottom: 0.25rem solid transparent;
+    }
+    #mainNav.navbar-shrink .nav-link:hover {
+      color: white;
+    }
+    #mainNav.navbar-shrink .nav-link:active {
+      color: white;
+    }
+    #mainNav.navbar-shrink .nav-link.active {
+      color: white;
+      outline: none;
+      border-bottom: 0.25rem solid white;
+    }
+}
+/* #endregion */
+
+/* #region masthead */
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    /* background: linear-gradient(to bottom, rgba(121, 19, 43, 0.3) 0%, rgba(121, 19, 43, 0.7) 75%, #161616 100%), url("../img/bg-masthead.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+  
+.masthead h1 {
+    font-family: 'Varela Round';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    -webkit-text-fill-color: transparent;
+}
+  
+.masthead h2 {
+    max-width: 20rem;
+    font-size: 1rem;
+}
+  
+@media (min-width: 768px) {
+    .masthead h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+}
+  
+@media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+      padding: 0;
+    }
+    .masthead h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+    .masthead h2 {
+      max-width: 30rem;
+      font-size: 1.25rem;
+    }
+}
+/* #endregion */
